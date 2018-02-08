@@ -1,9 +1,13 @@
 <table>
-<% @posts.each do |x| %>
-    <td>
-    <%= image_tag x.image.url(:medium), class: "image-responsive, img-thumbnail"%>
-    <br>
-    <%= x.description %>
-  </td>
+  <% @posts.in_groups_of(4, false).each do |group| %>
+<div class="row">
+<% group.each do |post| %>
+<div class="col-md-3">
+
+    <%= image_tag post.image.url(:large), class: "image-responsive, img-thumbnail"%>
+    <%= post.description %>
+  </div>
   <% end %>
-<body>
+</div>
+<% end %>
+</table>
