@@ -3,8 +3,7 @@
 <div class="row">
 <% group.each do |post| %>
 <div class="col-md-3">
-
-    <%= image_tag post.image.url(:large), class: "image-responsive, img-thumbnail"%>
+    <%= image_tag post.image.url, class: "image-responsive, img-thumbnail" %>
     <%= post.description %>
   </div>
   <% end %>
