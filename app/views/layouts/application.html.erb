@@ -54,13 +54,14 @@
                       <%= link_to "Register", new_user_registration_path %>
                     </li>
                     <% end %>
+                  </ul>
+                    <ul class="nav navbar-nav navbar-right">
 
                     <% if current_user %>
                     <li>
-                      <%= link_to "Profile", post_path(id: current_user.id) %>
+                      <%= link_to "#{current_user.email}", post_path(id: current_user.id) %>
                     </li>
                     <% end %>
-
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
