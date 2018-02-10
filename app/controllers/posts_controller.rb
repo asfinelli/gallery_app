@@ -11,9 +11,9 @@ class PostsController < ApplicationController
   end
 
   def show
-    @user = current_user
     @post = Post.where(user_id: current_user.id)
   end
+
 
   def create
     @post = current_user.posts.build(permit_post)
