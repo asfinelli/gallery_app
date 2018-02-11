@@ -3,8 +3,9 @@
 <div class="row">
 <% group.each do |post| %>
 <div class="col-md-3" h>
-    <%= image_tag post.image.url, class: "image-responsive, img-thumbnail" %>
-    <%= post.description %>
+
+  <%= (link_to image_tag(post.image.url, size: "260x180"), post, class: "image-responsive, img-thumbnail") %>
+  <%= post.description %>
   </div>
   <% end %>
 </div>

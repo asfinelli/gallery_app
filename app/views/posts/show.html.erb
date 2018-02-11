@@ -1,6 +1,6 @@
 <div>
   <% @post.each do |post| %>
-  <%= image_tag post.image.url(:large) %>
+  <%= image_tag post.image.url(:large), width: "80%", height: "80%" %><br>
     <%= post.description %>
     <% end %>
 </div>
