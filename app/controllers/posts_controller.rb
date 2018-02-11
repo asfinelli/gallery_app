@@ -11,7 +11,7 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.where(user_id: current_user.id)
+    @post = Post.where(id: params[:id])
   end
 
 

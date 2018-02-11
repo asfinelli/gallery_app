@@ -1,6 +1,6 @@
 <div>
-  <% @post.each do |x| %>
-    <%= image_tag x.image.url(:large) %>
-    <%= x.description %>
-<% end %>
+  <% @post.each do |post| %>
+  <%= image_tag post.image.url(:large) %>
+    <%= post.description %>
+    <% end %>
 </div>
