@@ -23,15 +23,14 @@
      /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
  }
 
+
 .nav navbar-nav > li:last-child {
   float: right !important;
 }
 
 
-.navbar {
-  background-color: #00BFFF;
-}
 
-.nav navbar-nav ul {
-  color: black;
+
+.navbar {
+  background-color: #483D8B;
 }
