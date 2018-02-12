@@ -7,7 +7,6 @@
   <% end %>
 
   <% @post.each do |post| %>
-
   <div class= "scroll" style= "float: right;">
     <%= link_to("Next Picture", post.next_post) if post.next_post%>
   </div>
