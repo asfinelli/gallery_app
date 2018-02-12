@@ -58,6 +58,12 @@
                       <%= link_to "Register", new_user_registration_path %>
                     </li>
                     <% end %>
+                    <li style="margin-top: 12px;">
+                      <%= form_tag(posts_path, method: :get) do %>
+                      <%= text_field_tag :term, params[:term] %>
+                      <%= submit_tag 'Search', name: nil %>
+                    </li>
+                    <% end %>
                   </ul>
                     <ul class="nav navbar-nav navbar-right">
 

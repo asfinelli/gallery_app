@@ -1,18 +1,19 @@
-
+<body style="padding-top: 20px;">
 
 <div>
   <% @post.each do |post| %>
-  <%= image_tag post.image.url(:large), width: "90%", height: "85%" %><br>
+  <%= image_tag post.image.url(:large), width: "800em", height: "450em" %><br>
   <%= post.description %>
   <% end %>
 
   <% @post.each do |post| %>
-  <div class= "scroll" style= "float: right;">
+  <button class= "scroll" style= "float: right; display: inline;">
     <%= link_to("Next Picture", post.next_post) if post.next_post%>
-  </div>
-  <div class= "previous scroll" style="float: left;">
+  </button>
+  <button class= "previous scroll" style="float: left; display: inline;">
     <%= link_to("Previous Picture", post.previous_post) if post.previous_post %>
-  </div>
+  </button>
   <% end %>
 
 </div>
+</body>

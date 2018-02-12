@@ -1,9 +1,4 @@
-<div>
-  <%= form_tag(posts_path, method: :get) do %>
-  <%= text_field_tag :term, params[:term] %>
-  <%= submit_tag 'Search', name: nil %>
-  <% end %>
-</div>
+
 <table>
   <% @posts.in_groups_of(4, false).each do |group| %>
 <div class="row", style="margin: 1 0 1 0;">
