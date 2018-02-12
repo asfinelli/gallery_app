@@ -5,8 +5,7 @@ before_action :configure_sign_in_params, only: [:create, :show]
 def show
 @user = current_user
 @post = Post.where(user_id: current_user.id)
-def
-
+end
   # GET /resource/sign_in
   # def new
   #   super
