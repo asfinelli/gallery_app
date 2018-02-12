@@ -7,7 +7,11 @@ class PostsController < ApplicationController
   end
 
   def index
-    @posts = Post.all
+    @posts = if params[:term]
+      Post.where('Description ILIKE ?', "%#{params[:term.downcase]}%")
+    else
+      Post.all
+    end
   end
 
   def show

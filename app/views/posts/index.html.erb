@@ -1,13 +1,17 @@
-
-
+<div>
+  <%= form_tag(posts_path, method: :get) do %>
+  <%= text_field_tag :term, params[:term] %>
+  <%= submit_tag 'Search', name: nil %>
+  <% end %>
+</div>
 <table>
   <% @posts.in_groups_of(4, false).each do |group| %>
-<div class="row">
+<div class="row", style="margin: 1 0 1 0;">
 <% group.each do |post| %>
 <div class="col-md-3">
 
-    <%= (link_to image_tag(post.image.url, size: "260x180"), post, class: "image-responsive, img-thumbnail", rel: "shadowbox") %>
-    <%= post.description %>
+    <%= (link_to image_tag(post.image.url, size: "240x200"), post, class: "image-responsive, img-thumbnail", rel: "shadowbox") %>
+    <%# post.description %>
   </div>
   <% end %>
 </div>
