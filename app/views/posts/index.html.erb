@@ -1,14 +1,11 @@
 
-<table>
   <% @posts.in_groups_of(4, false).each do |group| %>
-<div class="row", style="margin: 1 0 1 0;">
-<% group.each do |post| %>
-<div class="col-md-3">
 
-    <%= (link_to image_tag(post.image.url, size: "240x200"), post, class: "image-responsive, img-thumbnail", rel: "shadowbox") %>
-    <%# post.description %>
-  </div>
+<div class="row img-responsive">
+<% group.each do |post| %>
+<div class="col-md-3 col-sm-3 col-xs-3">
+    <%= (link_to image_tag(post.image.url, class:"img-responsive, img-thumbnail"), post, rel: "shadowbox") %>
+</div>
   <% end %>
 </div>
 <% end %>
-</table>
