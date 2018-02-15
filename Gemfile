@@ -7,6 +7,7 @@ end
 gem 'jquery-rails'
 gem "paperclip", "~> 5.2.1"
 gem 'devise'
+gem 'aws-sdk', '~> 2.3'
 
 gem 'shadowbox-rails', '~> 0.0.4'# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
