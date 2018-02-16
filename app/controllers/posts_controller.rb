@@ -8,9 +8,10 @@ class PostsController < ApplicationController
 
   def index
     @posts = if params[:term]
-      Post.where('Description ILIKE ?', "%#{params[:term.downcase]}%")
+      Post.order(created_at: :desc).where('Description ILIKE ?', "%#{params[:term.downcase]}%")
+
     else
-      Post.all
+      Post.order(created_at: :desc)
     end
   end
 
