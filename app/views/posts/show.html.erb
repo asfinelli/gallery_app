@@ -2,7 +2,7 @@
 
 <div>
   <% @post.each do |post| %>
-  <%= image_tag post.image.url(:large), width: "800em", height: "450em" %><br>
+  <%= image_tag post.image.url(:large), width: "100%", height: "450em" %><br>
   <%= post.description %>
   <% end %>
 
