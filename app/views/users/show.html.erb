@@ -1,10 +1,11 @@
+<div class="container-fluid">
 <% @post.in_groups_of(4, false).each do |group| %>
-<div class="row img-responsive">
-  <% group.each do |post| %>
-  <div class="col-md-3 col-sm-3 col-xs-3">
-    <%= (link_to image_tag(post.image.url, class:"img-responsive, img-thumbnail"), post, rel: "shadowbox") %>
-  </div>
-  <% end %>
-
+<% group.each do |post| %>
+<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+  <div class="row img-thumbnail img-responsive">
+  <%= (link_to image_tag(post.image.url, width: "100%", height: "150em"), post, rel: "shadowbox") %>
+</div>
 </div>
 <% end %>
+<% end %>
+</div>
