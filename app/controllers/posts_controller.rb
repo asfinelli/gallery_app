@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :authenticate_user!, only: [:show, :create, :new]
+  before_action :authenticate_user!, only: [:show, :create, :new, :destroy]
 
 
   def new
@@ -29,6 +29,14 @@ class PostsController < ApplicationController
     end
   end
 
+  def destroy
+    @post = Post.find(params[:id])
+    @post.destroy
+    respond_to do |format|
+      format.html { redirect_to posts_path, notice: 'Picture was successfully destroyed.' }
+      format.json { head :no_content }
+    end
+  end
   private
   def permit_post
     params.require(:post).permit(:image, :description)
