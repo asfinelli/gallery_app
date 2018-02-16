@@ -1,110 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
-    <meta name="description" content="">
-    <meta name="author" content="">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-    <title>Airplane Gallery</title>
+  <title>Airplane Gallery</title>
 
-    <!-- Bootstrap core CSS -->
-    <!-- <link href="/assets/application.scss" rel="stylesheet" media-"all" rel="stylesheet">
-    <link href="/assets/application.js"> -->
-    <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
-    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <!-- Bootstrap core CSS -->
+  <!-- <link href="/assets/application.scss" rel="stylesheet" media-"all" rel="stylesheet">
+  <link href="/assets/application.js"> -->
+  <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
 
-    <%= csrf_meta_tags %>
+  <%= csrf_meta_tags %>
 
-    <!-- Custom styles for this template -->
-
-
-  </head>
-  <% unless controller.controller_name == "posts" && controller.action_name == "show" %>
+  <!-- Custom styles for this template -->
 
 
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <%= link_to "Gallery", posts_path, class:"navbar-brand" %>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                      <% if current_user %>
-                    <li>
-                        <%= link_to "New Post", new_post_path(current_user) %>
-                    </li>
-                    <% end %>
-                      <% if current_user %>
-                    <li>
-                      <%= link_to "Logout", destroy_user_session_path, method: :delete, confirm: "Are you sure?" %>
-                    </li>
-                      <% else %>
-                      <li>
-                        <%= link_to "Login", new_user_session_path %>
-                    </li>
-
-                    <li>
-                      <%= link_to "Register", new_user_registration_path %>
-                    </li>
-                    <% end %>
-                    <li style="margin-top: 12px;">
-                      <%= form_tag(posts_path, method: :get) do %>
-                      <%= text_field_tag :term, params[:term] %>
-                      <%= submit_tag 'Search', name: nil %>
-                    </li>
-                    <% end %>
-                  </ul>
-                    <ul class="nav navbar-nav navbar-right">
-
-                    <% if current_user %>
-                    <li>
-                      <%= link_to "#{current_user.email}", user_path(id: current_user.id) %>
-                    </li>
-                    <% end %>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
-    <% end %>
-    <body>
+</head>
+<% unless controller.controller_name == "posts" && controller.action_name == "show" %>
 
 
-    <!-- Page Content -->
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <% flash.each do |a, b| %>
-            <div class="alert alert-success"> <%= b %> </div>
-            <% end %>
-              <%= yield %>
-              <%= javascript_include_tag "shadowbox.js" %>
-              <script type="text/javascript">
-              Shadowbox.init({
-                handleOversize: "none",
-                overlayColor: '#fff'
-              });
-            </script>
-        </div>
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <%= link_to "Gallery", posts_path, class:"navbar-brand" %>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <% if current_user %>
+        <li>
+          <%= link_to "New Post", new_post_path(current_user) %>
+        </li>
+        <% end %>
+        <% if current_user %>
+        <li>
+          <%= link_to "Logout", destroy_user_session_path, method: :delete, confirm: "Are you sure?" %>
+        </li>
+        <% else %>
+        <li>
+          <%= link_to "Login", new_user_session_path %>
+        </li>
+
+        <li>
+          <%= link_to "Register", new_user_registration_path %>
+        </li>
+        <% end %>
+        <li style="margin-top: 12px;">
+          <%= form_tag(posts_path, method: :get) do %>
+          <%= text_field_tag :term, params[:term] %>
+          <%= submit_tag 'Search', name: nil %>
+        </li>
+        <% end %>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+
+        <% if current_user %>
+        <li>
+          <%= link_to "#{current_user.email}", user_path(id: current_user.id) %>
+        </li>
+        <% end %>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+<% end %>
+<body>
+
+
+  <!-- Page Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <% flash.each do |a, b| %>
+        <div class="alert alert-success"> <%= b %> </div>
+        <% end %>
+        <%= yield %>
+        <%= javascript_include_tag "shadowbox.js" %>
+        <script type="text/javascript">
+        Shadowbox.init({
+          handleOversize: "none",
+          overlayColor: '#fff'
+        });
+        </script>
       </div>
     </div>
+  </div>
 
-    <!-- Bootstrap core JavaScript -->
-    <!-- <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script> -->
+  <!-- Bootstrap core JavaScript -->
+  <!-- <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script> -->
 
-  </body>
+</body>
 
 </html>

@@ -5,10 +5,10 @@ class Post < ApplicationRecord
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
 
 
-  def next_post
+  def previous_post
     self.class.where("created_at > ?", created_at).order(created_at: :asc).first
   end
-  def previous_post
+  def next_post
     self.class.where("created_at < ?", created_at).order(created_at: :desc).first
   end
 

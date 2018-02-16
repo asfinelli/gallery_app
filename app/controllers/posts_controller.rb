@@ -1,6 +1,5 @@
 class PostsController < ApplicationController
-  before_action :authenticate_user!, only: [:show, :create, :new, :destroy]
-
+  before_action :authenticate_user!, only: [ :create, :new, :destroy]
 
   def new
     @post = current_user.posts.build
@@ -9,7 +8,6 @@ class PostsController < ApplicationController
   def index
     @posts = if params[:term]
       Post.order(created_at: :desc).where('Description ILIKE ?', "%#{params[:term.downcase]}%")
-
     else
       Post.order(created_at: :desc)
     end
@@ -18,7 +16,6 @@ class PostsController < ApplicationController
   def show
     @post = Post.where(id: params[:id])
   end
-
 
   def create
     @post = current_user.posts.build(permit_post)
@@ -38,6 +35,7 @@ class PostsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
   private
   def permit_post
     params.require(:post).permit(:image, :description)
