@@ -1,0 +1,5 @@
+<% @comments.each do |comment| %>
+<p> <%= comment.content %></p>
+<p> <%= comment.user_id %></p>
+<% end %>
+<%= render 'comments/form' %>
