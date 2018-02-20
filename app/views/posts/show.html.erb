@@ -1,19 +1,24 @@
 <body style="padding-top: 20px;">
 
 <div>
-  <% @post.each do |post| %>
-  <%= image_tag post.image.url(:large), width: "100%", height: "450em" %><br>
-  <%= post.description %>
-  <% end %>
 
-  <% @post.each do |post| %>
+  <%= image_tag @post.image.url(:large), width: "100%", height: "450em" %><br>
+  <%= @post.description %>
+
+
   <button class= "scroll" style= "float: right; display: inline;">
-    <%= link_to("Next Picture", post.next_post) if post.next_post%>
+    <%= link_to("Next Picture", @post.next_post) if @post.next_post%>
   </button>
   <button class= "previous scroll" style="float: left; display: inline;">
-    <%= link_to("Previous Picture", post.previous_post) if post.previous_post %>
-  </button>
-  <% end %>
+    <%= link_to("Previous Picture", @post.previous_post) if @post.previous_post %>
+  </button><br>
+
+
+
+
+  <%=render 'comments/form' %>
+
 
 </div>
+
 </body>

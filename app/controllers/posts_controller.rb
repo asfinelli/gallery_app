@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!, only: [ :create, :new, :destroy]
+  before_action :set_post
 
   def new
     @post = current_user.posts.build
@@ -14,7 +15,7 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.where(id: params[:id])
+    @comment = Comment.where(params[:post_id])
   end
 
   def create
@@ -37,6 +38,12 @@ class PostsController < ApplicationController
   end
 
   private
+
+
+  def set_post
+    @post = Post.find(params[:id])
+  
+end
   def permit_post
     params.require(:post).permit(:image, :description)
   end
