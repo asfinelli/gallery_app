@@ -3,7 +3,7 @@
 <div>
 
   <%= image_tag @post.image.url(:large), width: "100%", height: "450em" %><br>
-  <%= @post.description %>
+ <h1 style="text-decoration:underline;"><%= @post.description %> </h1>
   <%=render 'comments/comment' %>
 
 
