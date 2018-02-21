@@ -1,5 +1,14 @@
 <% @comments.each do |comment| %>
-<p> <%= comment.content %></p>
-<p> <%= comment.user_id %></p>
+<div class="row">
+
+<ul style="list-style:none; display:flex;">
+  <li><%= comment.user.email %></li>
+
+  <li style="margin-left:5px;max-width:300px;
+    word-wrap:break-word;"><%= comment.content %></li>
+</ul>
+</div>
+
 <% end %>
 <%= render 'comments/form' %>
+</div>
