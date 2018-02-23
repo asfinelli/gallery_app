@@ -16,6 +16,7 @@ class PostsController < ApplicationController
 
   def show
     @comments = Comment.where(post_id: @post).order("created_at DESC")
+
   end
 
   def create
@@ -30,7 +31,7 @@ class PostsController < ApplicationController
 
   def destroy
     @post = Post.find(params[:id])
-    @post.destroy
+    @post.destroyrai
     respond_to do |format|
       format.html { redirect_to posts_path, notice: 'Picture was successfully destroyed.' }
       format.json { head :no_content }
@@ -43,7 +44,7 @@ class PostsController < ApplicationController
   def set_post
     @post = Post.find(params[:id])
 
-end
+  end
   def permit_post
     params.require(:post).permit(:image, :description)
   end
