@@ -1,5 +1,7 @@
 {
   "name": "gallery_app",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "jquery": "^3.3.1"
+  }
 }

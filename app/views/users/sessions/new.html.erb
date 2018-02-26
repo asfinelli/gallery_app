@@ -19,7 +19,8 @@
   <% end -%>
 
   <div class="actions">
-    <%= f.submit "Log in" %>
+
+    <%= f.button "Log in", class: "btn btn-success btndata: {disable_with: "<i 'class=fa fa-spinner fa-spin'<>/i> Signing in..."}%>
   </div>
 <% end %>
 

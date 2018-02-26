@@ -1,3 +1,4 @@
+
     <div class="container-fluid">
     <% @posts.in_groups_of(4, false).each do |group| %>
     <% group.each do |post| %>
@@ -11,4 +12,6 @@
 
     <% end %>
     <% end %>
+
+<%= link_to "comments", "#", id: "comments-link" %>
   </div>
