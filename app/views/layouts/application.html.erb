@@ -21,6 +21,7 @@
 
   <%= csrf_meta_tags %>
 
+
   <!-- Custom styles for this template -->
 
 
@@ -92,13 +93,15 @@
         <% flash.each do |a, b| %>
         <div class="alert alert-success"> <%= b %> </div>
         <% end %>
-        <%= yield %>
         <script type="text/javascript">
         Shadowbox.init({
           handleOversize: "none",
           overlayColor: '#fff'
         });
         </script>
+        <%= yield %>
+
+
       </div>
     </div>
   </div>
