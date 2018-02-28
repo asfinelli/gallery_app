@@ -1,0 +1,201 @@
+/* line 1, /usr/local/lib/ruby/gems/2.4.0/gems/shadowbox-rails-0.0.4/vendor/assets/stylesheets/shadowbox.css.scss */
+#sb-title-inner, #sb-info-inner, #sb-loading-inner, div.sb-message {
+  font-family: "HelveticaNeue-Light","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 200;
+  color: #fff;
+}
+
+/* line 2, /usr/local/lib/ruby/gems/2.4.0/gems/shadowbox-rails-0.0.4/vendor/assets/stylesheets/shadowbox.css.scss */
+#sb-container {
+  position: fixed;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  text-align: left;
+  visibility: hidden;
+  display: none;
+}
+
+/* line 3, /usr/local/lib/ruby/gems/2.4.0/gems/shadowbox-rails-0.0.4/vendor/assets/stylesheets/shadowbox.css.scss */
+#sb-overlay {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+/* line 4, /usr/local/lib/ruby/gems/2.4.0/gems/shadowbox-rails-0.0.4/vendor/assets/stylesheets/shadowbox.css.scss */
+#sb-wrapper {
+  position: absolute;
+  visibility: hidden;
+  width: 100px;
+}
+
+/* line 5, /usr/local/lib/ruby/gems/2.4.0/gems/shadowbox-rails-0.0.4/vendor/assets/stylesheets/shadowbox.css.scss */
+#sb-wrapper-inner {
+  position: relative;
+  border: 1px solid #303030;
+  overflow: hidden;
+  height: 100px;
+}
+
+/* line 6, /usr/local/lib/ruby/gems/2.4.0/gems/shadowbox-rails-0.0.4/vendor/assets/stylesheets/shadowbox.css.scss */
+#sb-body {
+  position: relative;
+  height: 100%;
+}
+
+/* line 7, /usr/local/lib/ruby/gems/2.4.0/gems/shadowbox-rails-0.0.4/vendor/assets/stylesheets/shadowbox.css.scss */
+#sb-body-inner {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+/* line 8, /usr/local/lib/ruby/gems/2.4.0/gems/shadowbox-rails-0.0.4/vendor/assets/stylesheets/shadowbox.css.scss */
+#sb-player.html {
+  height: 100%;
+  overflow: auto;
+}
+
+/* line 9, /usr/local/lib/ruby/gems/2.4.0/gems/shadowbox-rails-0.0.4/vendor/assets/stylesheets/shadowbox.css.scss */
+#sb-body img {
+  border: none;
+}
+
+/* line 10, /usr/local/lib/ruby/gems/2.4.0/gems/shadowbox-rails-0.0.4/vendor/assets/stylesheets/shadowbox.css.scss */
+#sb-loading {
+  position: relative;
+  height: 100%;
+}
+
+/* line 11, /usr/local/lib/ruby/gems/2.4.0/gems/shadowbox-rails-0.0.4/vendor/assets/stylesheets/shadowbox.css.scss */
+#sb-loading-inner {
+  position: absolute;
+  font-size: 14px;
+  line-height: 24px;
+  height: 24px;
+  top: 50%;
+  margin-top: -12px;
+  width: 100%;
+  text-align: center;
+}
+
+/* line 12, /usr/local/lib/ruby/gems/2.4.0/gems/shadowbox-rails-0.0.4/vendor/assets/stylesheets/shadowbox.css.scss */
+#sb-loading-inner span {
+  background: url(/assets/shadowbox/loading-dde8aaf55e4560e78be75cefb6654e4e3f6bb895c3c539818dd1dcfd0dfccafc.gif) no-repeat;
+  padding-left: 34px;
+  display: inline-block;
+}
+
+/* line 13, /usr/local/lib/ruby/gems/2.4.0/gems/shadowbox-rails-0.0.4/vendor/assets/stylesheets/shadowbox.css.scss */
+#sb-body, #sb-loading {
+  background-color: #060606;
+}
+
+/* line 14, /usr/local/lib/ruby/gems/2.4.0/gems/shadowbox-rails-0.0.4/vendor/assets/stylesheets/shadowbox.css.scss */
+#sb-title, #sb-info {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* line 15, /usr/local/lib/ruby/gems/2.4.0/gems/shadowbox-rails-0.0.4/vendor/assets/stylesheets/shadowbox.css.scss */
+#sb-title, #sb-title-inner {
+  height: 26px;
+  line-height: 26px;
+}
+
+/* line 16, /usr/local/lib/ruby/gems/2.4.0/gems/shadowbox-rails-0.0.4/vendor/assets/stylesheets/shadowbox.css.scss */
+#sb-title-inner {
+  font-size: 16px;
+}
+
+/* line 17, /usr/local/lib/ruby/gems/2.4.0/gems/shadowbox-rails-0.0.4/vendor/assets/stylesheets/shadowbox.css.scss */
+#sb-info, #sb-info-inner {
+  height: 20px;
+  line-height: 20px;
+}
+
+/* line 18, /usr/local/lib/ruby/gems/2.4.0/gems/shadowbox-rails-0.0.4/vendor/assets/stylesheets/shadowbox.css.scss */
+#sb-info-inner {
+  font-size: 12px;
+}
+
+/* line 19, /usr/local/lib/ruby/gems/2.4.0/gems/shadowbox-rails-0.0.4/vendor/assets/stylesheets/shadowbox.css.scss */
+#sb-nav {
+  float: right;
+  height: 16px;
+  padding: 2px 0;
+  width: 45%;
+}
+
+/* line 20, /usr/local/lib/ruby/gems/2.4.0/gems/shadowbox-rails-0.0.4/vendor/assets/stylesheets/shadowbox.css.scss */
+#sb-nav a {
+  display: block;
+  float: right;
+  height: 16px;
+  width: 16px;
+  margin-left: 3px;
+  cursor: pointer;
+  background-repeat: no-repeat;
+}
+
+/* line 21, /usr/local/lib/ruby/gems/2.4.0/gems/shadowbox-rails-0.0.4/vendor/assets/stylesheets/shadowbox.css.scss */
+#sb-nav-close {
+  background-image: url(/assets/shadowbox/close-e7d29293b07f73e1e83a34ac7c8b2bd4f202cabe6ba24c57e9fd633454ac5308.png);
+}
+
+/* line 22, /usr/local/lib/ruby/gems/2.4.0/gems/shadowbox-rails-0.0.4/vendor/assets/stylesheets/shadowbox.css.scss */
+#sb-nav-next {
+  background-image: url(/assets/shadowbox/next-d6c631c27bae6359c6467be18658dd9ce08b5703d4db07a41660bdc436962876.png);
+}
+
+/* line 23, /usr/local/lib/ruby/gems/2.4.0/gems/shadowbox-rails-0.0.4/vendor/assets/stylesheets/shadowbox.css.scss */
+#sb-nav-previous {
+  background-image: url(/assets/shadowbox/previous-ebf3bdc8376666c88f8f9fc120f96f4edfcaaddcbaebb65dab6e29f914c370c5.png);
+}
+
+/* line 24, /usr/local/lib/ruby/gems/2.4.0/gems/shadowbox-rails-0.0.4/vendor/assets/stylesheets/shadowbox.css.scss */
+#sb-nav-play {
+  background-image: url(/assets/shadowbox/play-b793b59c5ea01c4a015f68c628f1809ad36e9fe3acb308cf69957d0d967e57a3.png);
+}
+
+/* line 25, /usr/local/lib/ruby/gems/2.4.0/gems/shadowbox-rails-0.0.4/vendor/assets/stylesheets/shadowbox.css.scss */
+#sb-nav-pause {
+  background-image: url(/assets/shadowbox/pause-c0f759f713a7270231454bfc6a4a223713c5aad13655178efc97c80112123b9c.png);
+}
+
+/* line 26, /usr/local/lib/ruby/gems/2.4.0/gems/shadowbox-rails-0.0.4/vendor/assets/stylesheets/shadowbox.css.scss */
+#sb-counter {
+  float: left;
+  width: 45%;
+}
+
+/* line 27, /usr/local/lib/ruby/gems/2.4.0/gems/shadowbox-rails-0.0.4/vendor/assets/stylesheets/shadowbox.css.scss */
+#sb-counter a {
+  padding: 0 4px 0 0;
+  text-decoration: none;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* line 28, /usr/local/lib/ruby/gems/2.4.0/gems/shadowbox-rails-0.0.4/vendor/assets/stylesheets/shadowbox.css.scss */
+#sb-counter a.sb-counter-current {
+  text-decoration: underline;
+}
+
+/* line 29, /usr/local/lib/ruby/gems/2.4.0/gems/shadowbox-rails-0.0.4/vendor/assets/stylesheets/shadowbox.css.scss */
+div.sb-message {
+  font-size: 12px;
+  padding: 10px;
+  text-align: center;
+}
+
+/* line 30, /usr/local/lib/ruby/gems/2.4.0/gems/shadowbox-rails-0.0.4/vendor/assets/stylesheets/shadowbox.css.scss */
+div.sb-message a:link, div.sb-message a:visited {
+  color: #fff;
+  text-decoration: underline;
+}
