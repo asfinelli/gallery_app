@@ -7,7 +7,7 @@
 
   <% @comments.each do |comment| %>
   <section id="comments-section">
-    <div class="col-md-10 col-sm-10">
+    <div class="col-md-8 col-sm-8 col-xs-8">
       <div class="panel panel-default arrow left">
         <div class="panel-body">
           <header class="text-left">
@@ -16,7 +16,7 @@
           <div class="comment-post">
             <div style="list-style:none;display:flex;max-width:100%;">
 
-              <div style="max-width:30em;word-wrap:break-word;"><%= comment.content %></div>
+              <div style="max-width:100%;word-wrap:break-word;"><%= comment.content %></div>
             </div>
           </div>
         </div>
