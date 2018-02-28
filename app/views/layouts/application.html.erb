@@ -15,6 +15,8 @@
   <link href="/assets/application.js"> -->
   <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "shadowbox.js" %>
+
 
   <%= csrf_meta_tags %>
 
@@ -90,7 +92,6 @@
         <div class="alert alert-success"> <%= b %> </div>
         <% end %>
         <%= yield %>
-        <%= javascript_include_tag "shadowbox.js" %>
         <script type="text/javascript">
         Shadowbox.init({
           handleOversize: "none",
