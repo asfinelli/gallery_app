@@ -15,5 +15,5 @@
 //= require jquery
 //= require rails-ujs
 //= require bootstrap-sprockets
-+//= require shadowbox
+//= require shadowbox
 //= require_tree .
