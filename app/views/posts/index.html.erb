@@ -1,4 +1,9 @@
-
+<script type="text/javascript">
+Shadowbox.init({
+  handleOversize: "none",
+  overlayColor: '#fff'
+});
+</script>
     <div class="container-fluid">
     <% @posts.in_groups_of(4, false).each do |group| %>
     <% group.each do |post| %>
