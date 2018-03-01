@@ -31,18 +31,16 @@ class PostsController < ApplicationController
 
   def destroy
     @post = Post.find(params[:id])
-    @post.destroy
 
+    @post.destroy
     respond_to do |format|
       format.html { redirect_to user_path, notice: 'Picture was successfully destroyed.' }
       format.json { head :no_content }
-
-
     end
   end
 
-  private
 
+  private
 
   def set_post
     @post = Post.find(params[:id])
