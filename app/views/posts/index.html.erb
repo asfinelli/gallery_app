@@ -1,17 +1,19 @@
 
-    <div class="container-fluid">
-    <% @posts.in_groups_of(4, false).each do |group| %>
-    <% group.each do |post| %>
+<div class="container-fluid">
 
-    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-      <div class="img-thumbnail img-responsive">
+  <% @posts.each do |post| %>
+
+  <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+    <div class="img-thumbnail img-responsive">
+      <% if post.image_content_type =~ /^image/ %>
+
       <%= (link_to image_tag(post.image.url, width: "100%", height: "150em"), post, rel: "shadowbox") %>
 
+      <% else post.image_content_type =~ /^video/ %>
+
+      <%= (link_to video_tag(post.image.url, width: "100%",  height: "150em"), post, rel: "shadowbox") %>
+      <% end %>
     </div>
   </div>
-
-    <% end %>
-    <% end %>
-
-
+  <% end %>
   </div>

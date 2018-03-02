@@ -1,21 +1,26 @@
 
 <body style="padding-top: 20px;">
   <div>
-  <button class= "scroll" style= "float: right; display: inline;">
-    <%= link_to("Next Picture", @post.next_post) if @post.next_post%>
-  </button>
-</div>
-<div>
-  <button class= "previous scroll" style="float: left; display: inline;">
-    <%= link_to("Previous Picture", @post.previous_post) if @post.previous_post %>
-  </button><br>
-</div>
-<div>
+    <button class= "scroll" style= "float: right; display: inline;">
+      <%= link_to("Next Picture", @post.next_post) if @post.next_post%>
+    </button>
+  </div>
+  <div>
+    <button class= "previous scroll" style="float: left; display: inline;">
+      <%= link_to("Previous Picture", @post.previous_post) if @post.previous_post %>
+    </button><br>
+  </div>
+  <div>
+    <% if @post.image_content_type =~ /^image/ %>
+    <%= image_tag @post.image.url, width: "95%", height: "65%"%><br>
 
-  <%= image_tag @post.image.url(:large), width: "95%", height: "65%" %><br>
- <h3 style="text-decoration:underline;"><%= @post.description %> </h3>
-</div>
-<br>
-<br />
+    <% else @post.image_content_type =~ /^video/ %>
+
+    <%= video_tag @post.image.url, width: "95%", height: "65%", controls: "true" %><br>
+    <h3 style="text-decoration:underline;"><%= @post.description %> </h3>
+    <% end %>
+  </div>
+  <br>
+  <br />
   <%=render 'comments/comment' %>
 </body>

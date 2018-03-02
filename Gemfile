@@ -8,6 +8,7 @@ gem 'rails-ujs'
 gem 'jquery-rails'
 gem "paperclip", "~> 5.2.1"
 gem 'devise'
+gem 'paperclip-av-transcoder'
 gem 'aws-sdk', '~> 2.3'
 gem 'hirb'
 gem 'shadowbox-rails', '~> 0.0.4'# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
