@@ -3,7 +3,7 @@
 
   <% @posts.each do |post| %>
 
-  <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+  <div class="col-lg-3 col-md-4 col-sm-4 col-xs-6">
     <div class="img-thumbnail img-responsive">
       <% if post.image_content_type =~ /^image/ %>
 
@@ -11,7 +11,7 @@
 
       <% else post.image_content_type =~ /^video/ %>
 
-      <%= (link_to video_tag(post.image.url, width: "100%",  height: "150em"), post, rel: "shadowbox") %>
+      <%= (link_to video_tag(post.image.url, width: "100%",  height: "145em"), post, rel: "shadowbox") %>
       <% end %>
     </div>
   </div>
