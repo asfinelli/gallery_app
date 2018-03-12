@@ -21,8 +21,11 @@
      background-color: #FFF5EE;
      /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
  }
- list-style: none;
 
+ .navbar {
+   background-color: #483D8B;
+
+ }
 .nav navbar-nav > li:last-child {
   float: right !important;
 
@@ -30,8 +33,9 @@
 
 
 
-  list-style: none;
-.navbar {
-  background-color: #483D8B;
-  list-style: none;
-}
+
+
+  .nav .navbar-nav > li {
+    list-style: none;
+    color: black;
+  }
