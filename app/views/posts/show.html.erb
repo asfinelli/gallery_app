@@ -9,18 +9,17 @@
       <%= link_to("Previous Picture", @post.previous_post) if @post.previous_post %>
     </button><br>
   </div>
-  <div>
+  <div style="text-align:center;">
     <% if @post.image_content_type =~ /^image/ %>
-    <%= image_tag @post.image.url, width: "95%", height: "65%"%><br>
+    <%= image_tag @post.image.url, width: "95%", height: "60%"%><br>
 
     <% else @post.image_content_type =~ /^video/ %>
 
-    <%= video_tag @post.image.url, width: "95%", height: "65%", controls: "true" %><br>
+    <%= video_tag @post.image.url, width: "95%", height: "60%", controls: "true" %><br>
+<% end %>
+    <h3 style="text-decoration:underline;"><%= @post.description %> </h3>
+</div>
 
-    <h3 style="text-decoration:underline;text-align: center;""><%= @post.description %> </h3>
-
-    <% end %>
-  </div>
   <br>
   <br />
   <%=render 'comments/comment' %>
