@@ -9,7 +9,7 @@ class UsersController < ApplicationController
   end
 
   def index
-    @post = Post.where(user_id: @user.id)
+    @posts = Post.where(user_id: @user.id)
 end
 
 def set_user
