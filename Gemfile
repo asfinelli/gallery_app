@@ -4,6 +4,8 @@ git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
 end
+
+gem 'rails_admin', '~> 1.3'
 gem 'jquery-turbolinks'
 gem 'rails-ujs'
 gem 'jquery-rails'
